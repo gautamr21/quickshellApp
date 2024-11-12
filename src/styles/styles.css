@@ -1,0 +1,29 @@
+.App {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .display-component {
+    margin-bottom: 20px;
+  }
+  
+  .kanban-board {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .kanban-column {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .ticket-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }

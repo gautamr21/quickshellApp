@@ -1,38 +1,165 @@
-.App {
+/* Global App Styles */
+.app {
+  font-family: Arial, sans-serif;
   text-align: center;
+  background-color: #f5f5f5;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #444;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header Styling */
+.app-header {
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.display-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.display-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.options-popup {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-section label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.dropdown-section select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.dropdown-section select:hover {
+  border-color: #aaa;
+}
+
+/* Kanban Board */
+.kanban-board {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  overflow-x: auto;
+  flex-wrap: wrap; /* Ensure groups wrap if space runs out */
+}
+
+.ticket-group {
+  flex: 1; /* Allow group columns to shrink and fit in available space */
+  max-width: 300px; /* Set a maximum width for each group column */
+  min-width: 220px; /* Ensure a reasonable minimum width */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  /* Removed box-shadow for a flat design */
+}
+
+.ticket-group h2 {
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Ticket Cards */
+.ticket-cards {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.ticket-card {
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  flex: 1; /* Allow card width to adjust within group */
+  max-width: 100%; /* Ensure no horizontal overflow */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ticket-card h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.ticket-card p {
+  margin: 3px 0;
+  font-size: 13px;
+}
+
+.ticket-footer {
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: left;
+  color: #777;
+}
+
+.group-header {
+  display: flex;
+  justify-content: space-between; /* Ensures heading and icons are aligned on the same row */
+  align-items: center; /* Vertically aligns icons with the heading */
+}
+
+.group-title {
+  display: flex;
+  align-items: center; /* Align icon and heading vertically */
+  gap: 10px; /* Space between icon and heading */
+}
+.group-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.group-icons {
+  display: flex;
+  gap: 10px; /* Space between icons */
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer; /* Makes icons interactive */
 }
